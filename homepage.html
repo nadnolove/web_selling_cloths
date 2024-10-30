@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuna Shop</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-top">
+        <div class="contact-info">
+            <p>Liên hệ trực tiếp: <span class="contact-number">001-002-003</span></p>
+            <div class="user-actions">
+                <div class="user-icon">
+                    <img src="user-icon.png" alt="User icon">
+                </div>
+                <!-- Nút Đăng ký -->
+                <button id="openModal" class="register-btn">Đăng ký</button>
+                <!-- Nút Đăng nhập -->
+                <button id="openLoginModal" class="login-btn">Đăng nhập</button>    
+                <a href="#">Giỏ hàng</a>
+                <span class="divider">/</span>            
+                <button class="btn-cart">
+                    <img src="cart-icon.png" alt="Giỏ hàng"> Giỏ hàng
+                </button>
+            </div>
+        </div>
+        <div class="navbar-container">
+            <div class="logo">
+                <h1>yuna</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Thời trang nam</a></li>
+                    <li><a href="#">Thời trang nữ</a></li>
+                    <li><a href="#">Trẻ em</a></li>
+                    <li><a href="#">Phụ kiện</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Tìm kiếm..." />
+                <button class="search-btn">
+                    <img src="search-icon.png" alt="Search">
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- Hộp thoại Đăng ký -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <div class="register-form">
+                <div class="register-banner">
+                    <img src="banner.jpg" alt="Quyền lợi thành viên">
+                </div>
+                <h2>Đăng ký</h2>
+                <form action="#">
+                    <label for="username">Tên tài khoản</label>
+                    <input type="text" id="username" placeholder="Vui lòng nhập...">
+                    
+                    <label for="password">Mật khẩu</label>
+                    <input type="password" id="password" placeholder="Vui lòng nhập...">
+                    
+                    <label for="confirm-password">Nhập lại mật khẩu</label>
+                    <input type="password" id="confirm-password" placeholder="Vui lòng nhập...">
+                    
+                    <label for="phone">Số điện thoại</label>
+                    <input type="text" id="phone" placeholder="Vui lòng nhập...">
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Vui lòng nhập...">
+                    
+                    <button type="submit" class="submit-btn" id="registerbtn">Tạo</button>
+                </form>
+                <p class="note">* Khi ấn tiếp tục, bạn xác nhận đã đọc và đồng ý với <a href="#">điều khoản dịch vụ</a> cùng <a href="#">chính sách bảo mật</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="homepage.js"></script>
+
+    <!-- Hộp thoại Đăng nhập -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeLoginModal">&times;</span>
+            <div class="login-form">
+                <div class="login-banner">
+                    <img src="banner.jpg" alt="Quyền lợi thành viên">
+                </div>
+                <h2>Đăng nhập</h2>
+                <p>Đăng nhập miễn phí để trở thành Khách hàng thân thiết và nhận ưu đãi độc quyền từ Yuna.</p>
+                <form action="#">
+                    <label for="login-username">Tên tài khoản</label>
+                    <input type="text" id="login-username" placeholder="Vui lòng nhập...">
+                    
+                    <label for="login-password">Mật khẩu</label>
+                    <input type="password" id="login-password" placeholder="Vui lòng nhập...">
+                    
+                    <button type="submit" class="submit-btn" id="loginbtn">Đăng nhập</button>
+                </form>
+                <p class="note">* Khi ấn tiếp tục, bạn xác nhận đã đọc và đồng ý với <a href="#">điều khoản dịch vụ</a> cùng <a href="#">chính sách bảo mật</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="banner-content">
+            <div class="banner-text">
+                <h1>Giá tốt, mặc đẹp</h1>
+                <p>Chào mùa mới sang, voucher giảm thêm 50.000đ cho hóa đơn từ 300.000đ</p>
+            </div>
+            <div class="banner-image">
+                <img src="banner.jpg" alt="Banner Image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="categories">
+        <h2>Sản phẩm nổi bật</h2>
+        <div class="category-grid">
+            <div class="category">
+                <img src="nu.jpg" alt="Nữ">
+                <p>Nữ</p>
+            </div>
+            <div class="category">
+                <img src="nam.jpg" alt="Nam">
+                <p>Nam</p>
+            </div>
+            <div class="category">
+                <img src="be-gai.jpg" alt="Bé Gái">
+                <p>Bé Gái</p>
+            </div>
+            <div class="category">
+                <img src="be-trai.jpg" alt="Bé Trai">
+                <p>Bé Trai</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <h2>Áo Phông Đa Sắc Màu</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="product1.jpg" alt="Product 1">
+                <p>Áo phông nữ cổ tròn in hình</p>
+                <span>120.000đ</span>
+            </div>
+            <div class="product">
+                <img src="product2.jpg" alt="Product 2">
+                <p>Áo phông nữ thêu logo</p>
+                <span>220.000đ</span>
+            </div>
+            <div class="product">
+                <img src="product3.jpg" alt="Product 3">
+                <p>Áo phông tay ngắn</p>
+                <span>150.000đ</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shorts Section -->
+    <section class="shorts">
+        <h2>Quần Soóc</h2>
+        <div class="shorts-content">
+            <div class="shorts-text">
+                <h3>Cho ngày hè năng động</h3>
+                <ul>
+                    <li>Bền màu, giữ form</li>
+                    <li>Thoải mái, thoáng mát</li>
+                </ul>
+            </div>
+            <div class="shorts-grid">
+                <div class="short">
+                    <img src="short1.jpg" alt="Short 1">
+                    <p>Quần soóc nữ</p>
+                    <span>170.000đ</span>
+                </div>
+                <div class="short">
+                    <img src="short2.jpg" alt="Short 2">
+                    <p>Quần soóc nam</p>
+                    <span>180.000đ</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 YUNA</p>
+    </footer>
+</body>
+</html>
